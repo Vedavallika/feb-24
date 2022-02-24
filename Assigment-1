@@ -1,20 +1,11 @@
-l=[]
-o=[]
-e=[]
-n=int(input('enter n value:'))
-for i in range(n):
-    x=int(input())
-    l.append(x)
-for i in l:
-    if i%2==0:
-        e.append(i)
-    else:
-        o.append(i)
-print(o,'   ',e)
-enter n value:5
-23
-45
-98
-56
-83
-[23, 45, 83]   [98, 56]
+n =int(input("enter a number"))
+primes = []
+for i in range(2, n + 1):
+	for j in range(2, int(i ** 0.5) + 1):
+ 		if i%j == 0:
+ 			break
+	else:
+		primes.append(i)
+print(primes)
+enter a number5
+[2, 3, 5]
